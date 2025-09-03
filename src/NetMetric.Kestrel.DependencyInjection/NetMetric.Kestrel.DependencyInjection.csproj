@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <Description>
+      DI extensions to wire Kestrel metrics into your app. Registers KestrelMetricSet and a hosted service,
+      and exposes KestrelMetricOptions to configure TLS handshake histogram buckets.
+    </Description>
+    <PackageTags>
+      netmetric;kestrel;dependency-injection;di;servicecollection;hostedservice;tls;histogram;metrics;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+    <ProjectReference Include="..\NetMetric.Kestrel\NetMetric.Kestrel.csproj" />
+  </ItemGroup>
+
+</Project>

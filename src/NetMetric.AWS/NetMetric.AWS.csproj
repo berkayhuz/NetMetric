@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Provides AWS-specific metric exporters and environment detection for NetMetric. Includes CloudWatch exporters with buffering and retry policies, environment variable-based resource detection (Lambda, ECS, EC2, EKS), and dimensional tagging. Designed for high-performance telemetry and observability in AWS-hosted .NET applications with AOT/trimming compatibility.
+    </Description>
+    <PackageTags>
+      netmetric;aws;cloudwatch;metrics;telemetry;observability;lambda;ec2;eks;ecs;exporter;buffering;dimensions;dotnet;aot;environment-detection
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+		<PackageReference Include="AWSSDK.CloudWatch" Version="4.0.2.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.AWS.Abstractions\NetMetric.AWS.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

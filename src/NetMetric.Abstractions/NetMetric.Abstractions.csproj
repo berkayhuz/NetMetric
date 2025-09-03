@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Provides the core abstractions and contracts for building metrics in the NetMetric ecosystem. Includes interfaces for metric types (counters, gauges, histograms, summaries, timers), builders, exporters, quantile estimators, value types, and module lifecycle coordination. Designed for high-performance observability with support for AOT trimming and streaming analytics.
+    </Description>
+    <PackageTags>
+      netmetric;metrics;abstractions;telemetry;observability;interfaces;histogram;summary;gauge;counter;timer;dotnet;aot
+    </PackageTags>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+</Project>

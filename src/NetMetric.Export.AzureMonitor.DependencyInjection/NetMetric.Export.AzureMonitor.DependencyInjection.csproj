@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides dependency injection support for the NetMetric Azure Monitor exporter. Registers all necessary services including TelemetryClient, exporter implementations, validation, diagnostics, and background telemetry sender for reliable export to Azure Monitor.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;azure;monitor;appinsights;dependency-injection;export;telemetry;observability;diagnostics;dotnet;aot
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Export.AzureMonitor\NetMetric.Export.AzureMonitor.csproj" />
+	</ItemGroup>
+
+</Project>

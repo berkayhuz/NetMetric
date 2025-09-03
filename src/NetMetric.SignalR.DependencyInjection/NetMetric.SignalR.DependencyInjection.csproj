@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      DI extensions to plug SignalR metrics into your app. Registers SignalRMetricSet as ISignalRMetrics,
+      adds SignalRHubFilter globally, optionally decorates HubLifetimeManager&lt;T&gt;, and exposes an extension
+      to add negotiation metrics middleware.
+    </Description>
+    <PackageTags>
+      netmetric;signalr;dependency-injection;di;servicecollection;hubfilter;decorator;middleware;metrics;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.SignalR\NetMetric.SignalR.csproj" />
+  </ItemGroup>
+
+</Project>

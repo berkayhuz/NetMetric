@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.SystemIO.Abstractions provides platform-agnostic interfaces and models for reading I/O metrics in .NET applications.
+			It defines abstractions such as IProcessIoReader and ISystemIoReader, enabling cross-platform collection of device and process-level
+			read/write statistics while decoupling platform-specific implementations.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;io;abstractions;system;process;telemetry;interfaces;dotnet;crossplatform;observability
+		</PackageTags>
+	</PropertyGroup>
+
+</Project>

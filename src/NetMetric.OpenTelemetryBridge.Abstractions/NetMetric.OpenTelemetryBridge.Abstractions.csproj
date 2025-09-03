@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Defines abstractions for bridging NetMetric metrics to OpenTelemetry. Includes interfaces for customizable attribute mapping from tags to OpenTelemetry attributes.
+		</Description>
+
+		<PackageTags>
+			netmetric;opentelemetry;abstractions;metrics;telemetry;observability;bridge;dotnet;tags;attributes
+		</PackageTags>
+	</PropertyGroup>
+
+</Project>

@@ -1,0 +1,93 @@
+name: Release (all projects on tag)
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-tag-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NUGET_SOURCE: https://api.nuget.org/v3/index.json
+  NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
+
+jobs:
+  pack-and-push:
+    runs-on: ubuntu-latest
+    environment: nuget
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Ensure NuGet cache folder exists
+        run: mkdir -p "$NUGET_PACKAGES"
+
+      - name: Setup .NET (uses global.json if present)
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+          cache: true
+          cache-dependency-path: '**/packages.lock.json'
+
+      - name: "Guard: ensure lock files exist"
+        run: |
+          if ! find . -name packages.lock.json -print -quit | grep -q .; then
+            echo "ERROR: packages.lock.json not found. Run 'dotnet restore --use-lock-file' locally and commit." >&2
+            exit 1
+          fi
+
+      - name: Restore (locked)
+        run: dotnet restore --locked-mode
+
+      - name: Build (Release)
+        env:
+          ContinuousIntegrationBuild: true
+        run: dotnet build -c Release --no-restore
+
+      - name: Pack solution (outputs to ./artifacts)
+        run: |
+          mkdir -p artifacts
+          dotnet pack NetMetric.sln \
+            -c Release \
+            -o ./artifacts \
+            -p:ContinuousIntegrationBuild=true \
+            -p:IncludeSymbols=true \
+            -p:SymbolPackageFormat=snupkg \
+            -p:RepositoryUrl=${{ github.server_url }}/${{ github.repository }} \
+            -p:RepositoryBranch=${{ github.ref_name }} \
+            -p:RepositoryCommit=${{ github.sha }} \
+            -p:MinVerTagPrefix=v \
+            --no-build
+
+      - name: Upload built packages (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: nupkgs-all
+          path: artifacts/*
+          if-no-files-found: error
+
+      - name: Push to NuGet (skip duplicates)
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          shopt -s nullglob
+          PKGS=(artifacts/*.nupkg)
+          SYMS=(artifacts/*.snupkg)
+          if [ ${#PKGS[@]} -eq 0 ] && [ ${#SYMS[@]} -eq 0 ]; then
+            echo "No packages to push. Something went wrong upstream."; exit 1
+          fi
+          if [ ${#PKGS[@]} -gt 0 ]; then
+            dotnet nuget push "${PKGS[@]}" --api-key "$NUGET_API_KEY" --source "$NUGET_SOURCE" --skip-duplicate
+          fi
+          if [ ${#SYMS[@]} -gt 0 ]; then
+            dotnet nuget push "${SYMS[@]}" --api-key "$NUGET_API_KEY" --source "$NUGET_SOURCE" --skip-duplicate
+          fi

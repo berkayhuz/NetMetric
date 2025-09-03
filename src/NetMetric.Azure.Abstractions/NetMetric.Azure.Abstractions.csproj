@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <Description>
+      Provides Azure adapter abstractions for NetMetric, including credential providers, Cosmos DB diagnostics, Service Bus and Storage Queue admin interfaces. Designed for dependency-free instrumentation and SDK-agnostic metric collection across Azure services.
+    </Description>
+    <PackageTags>
+      netmetric;azure;abstractions;cosmosdb;servicebus;storagequeue;diagnostics;telemetry;metrics;aot;cloud;dotnet;sdk-agnostic
+    </PackageTags>
+  </PropertyGroup>
+
+</Project>

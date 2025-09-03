@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.Timer.AspNetCore provides middleware and extension methods for measuring HTTP request durations in ASP.NET Core applications.
+			It enables seamless integration of ITimerSink-based instrumentation for capturing server-side timing metrics such as route, status code,
+			and request method, helping teams gain visibility into web application performance.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;observability;aspnetcore;telemetry;timing;performance;middleware;http;httpmetrics;dotnet
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Timer\NetMetric.Timer.csproj" />
+	</ItemGroup>
+
+</Project>

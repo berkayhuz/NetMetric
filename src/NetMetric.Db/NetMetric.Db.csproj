@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides high-performance database instrumentation for .NET applications using NetMetric. Tracks query latency, active connections, pool state, and failure counts with minimal overhead. Designed for compatibility with any ADO.NET or Dapper-based data access layer.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;database;db;latency;instrumentation;observability;diagnostics;dotnet;aot
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Db.Abstractions\NetMetric.Db.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

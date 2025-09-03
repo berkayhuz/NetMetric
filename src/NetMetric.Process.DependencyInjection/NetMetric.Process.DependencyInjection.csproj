@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.Process.DependencyInjection provides dependency injection extensions for registering the NetMetric.Process module and related services into .NET applications. This package enables easy integration of process-level metric collection, including CPU, memory, threads, and uptime metrics, using Microsoft.Extensions.DependencyInjection.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;dependencyinjection;process;cpu;memory;uptime;threads;services;dotnet;observability;diagnostics;extensions;di
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Process.Abstractions\NetMetric.Process.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Process\NetMetric.Process.csproj" />
+	</ItemGroup>
+
+</Project>

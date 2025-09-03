@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides an exporter that sends NetMetric metrics to Elasticsearch using the Bulk API with configurable batching, retry, authentication, and index naming. Designed for resilience and compatibility with Elastic Cloud, OpenSearch, and self-hosted clusters.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;elasticsearch;opensearch;exporter;telemetry;observability;elastic;bulkapi;dotnet;aot;ndjson
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Export.Elastic.Abstractions\NetMetric.Export.Elastic.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Export\NetMetric.Export.csproj" />
+	</ItemGroup>
+
+</Project>

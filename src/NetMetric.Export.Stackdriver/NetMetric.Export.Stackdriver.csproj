@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Exports NetMetric metrics to Google Cloud Monitoring (Stackdriver), supporting gauges, counters, histograms, summaries, distributions, and multi-sample values. Includes batching, UCUM unit normalization, label sanitization, descriptor caching, and retry handling with backoff and jitter.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;export;stackdriver;google-cloud;monitoring;telemetry;observability;time-series;dotnet
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Google.Cloud.Monitoring.V3" Version="3.15.0" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.71.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Export\NetMetric.Export.csproj" />
+	</ItemGroup>
+
+</Project>

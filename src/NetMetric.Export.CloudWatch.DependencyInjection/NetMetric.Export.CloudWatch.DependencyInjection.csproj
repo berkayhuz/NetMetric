@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Adds dependency injection support for the NetMetric CloudWatch exporter. Enables configuration, validation, and service registration for publishing metrics to Amazon CloudWatch using the AWS SDK and .NET options pattern.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;cloudwatch;aws;export;dependency-injection;options;observability;dotnet;monitoring
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AWSSDK.CloudWatch" Version="4.0.2" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Export.CloudWatch\NetMetric.Export.CloudWatch.csproj" />
+	</ItemGroup>
+
+</Project>

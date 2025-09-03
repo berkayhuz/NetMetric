@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.SystemIO is a cross-platform module for collecting process and system-level I/O throughput metrics in .NET.
+			It supports Linux, Windows, and macOS, and provides collectors for tracking read/write performance over time.
+			This package integrates with NetMetric's observability framework and supports dependency injection.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;systemio;processio;diskio;observability;telemetry;performance;dotnet;crossplatform;monitoring;linux;windows;macos
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.SystemIO.Abstractions\NetMetric.SystemIO.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides dependency injection extensions for integrating NetMetric database metrics into applications. Registers the core database metrics module and instrumentation hooks for collecting connection and query telemetry.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;database;instrumentation;dependencyinjection;di;telemetry;diagnostics;db;aot
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Db.Abstractions\NetMetric.Db.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Db\NetMetric.Db.csproj" />
+	</ItemGroup>
+
+</Project>

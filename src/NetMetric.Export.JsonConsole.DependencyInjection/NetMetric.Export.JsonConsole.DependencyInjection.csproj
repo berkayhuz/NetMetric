@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides dependency injection extensions for registering the NetMetric JSON console exporter. Supports trimming, composite exporters, and default wiring into the metric pipeline using the Microsoft.Extensions.Options pattern.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;export;json;console;dependency-injection;aspnetcore;dotnet;telemetry;aot;observability;logging
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Export.JsonConsole\NetMetric.Export.JsonConsole.csproj" />
+		<ProjectReference Include="..\NetMetric.Export\NetMetric.Export.csproj" />
+	</ItemGroup>
+
+</Project>

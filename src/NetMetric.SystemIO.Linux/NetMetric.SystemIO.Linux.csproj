@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.SystemIO.Linux provides Linux-specific implementations of IProcessIoReader and ISystemIoReader for collecting detailed I/O metrics
+			from the /proc and /sys filesystems. It enables observability of process and device-level read/write statistics using native system data,
+			supporting performance monitoring for .NET applications on Linux.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;io;system;linux;process;performance;telemetry;dotnet;procfs;sysfs;observability
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.SystemIO.Abstractions\NetMetric.SystemIO.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Kestrel server instrumentation via EventListener for Kestrel and System.Net.Security. Tracks active/total
+      connections by protocol and transport (h1/h2/h3 over tcp/quic), resets and keep-alive timeouts, HTTP/2 and
+      HTTP/3 stream activity, and TLS handshake duration with configurable histogram buckets.
+    </Description>
+    <PackageTags>
+      netmetric;kestrel;http;http2;http3;quic;tls;eventlistener;metrics;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

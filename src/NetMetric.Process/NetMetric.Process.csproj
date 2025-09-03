@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.Process provides real-time metrics for process-level observability in .NET applications.
+			It collects CPU, memory, thread, handle, and uptime statistics for the current process. The metrics are exposed via a modular, pluggable collector architecture and support default tagging and smoothing. This package integrates with the NetMetric observability framework and dependency injection.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;process;cpu;memory;uptime;threads;handles;dotnet;monitoring;observability;performance;diagnostics;collector
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Process.Abstractions\NetMetric.Process.Abstractions.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+</Project>

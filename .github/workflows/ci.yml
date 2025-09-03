@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+    tags-ignore: ["v*"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NUGET_SOURCE: https://api.nuget.org/v3/index.json
+  NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Setup .NET (uses global.json if present)
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+          cache: true
+          cache-dependency-path: '**/packages.lock.json'
+
+      - name: "Guard: ensure lock files exist"
+        run: |
+          if ! find . -name packages.lock.json -print -quit | grep -q .; then
+            echo "ERROR: packages.lock.json not found. Run 'dotnet restore --use-lock-file' locally and commit." >&2
+            exit 1
+          fi
+
+      - name: Restore (locked)
+        run: dotnet restore --locked-mode
+
+      - name: Build (Release, treat warnings as errors in CI)
+        env:
+          ContinuousIntegrationBuild: true
+        run: dotnet build -c Release --no-restore
+
+      - name: Check code style (dotnet-format)
+        run: |
+          dotnet tool install -g dotnet-format
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+          dotnet format --verify-no-changes
+
+      - name: Run tests (if any under tests/)
+        run: |
+          if compgen -G "tests/**/*.csproj" > /dev/null; then
+            dotnet test tests --configuration Release --no-build --verbosity normal
+          else
+            echo "No test projects found under tests/, skipping."
+          fi

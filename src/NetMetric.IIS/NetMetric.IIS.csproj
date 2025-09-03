@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      IIS in-process hosting metrics for .NET. Includes an EventListener that maps IIS/ASP.NET Core Module events
+      to counters and gauges (connections, requests, error reasons, listener faults), plus a hosted service that
+      enables collection on Windows unless disabled via environment variable.
+    </Description>
+    <PackageTags>
+      netmetric;iis;aspnetcore-module;inprocess;windows;eventlistener;eventsource;http;metrics;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

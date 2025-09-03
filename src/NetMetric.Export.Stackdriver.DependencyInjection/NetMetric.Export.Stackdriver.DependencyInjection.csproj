@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides dependency injection extensions for configuring the NetMetric Stackdriver exporter. Supports both delegate-based and configuration-based setup with trimming-safe and AOT-friendly validation logic.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;export;stackdriver;dependencyinjection;google-cloud;configuration;aot;dotnet;telemetry
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Export.Stackdriver\NetMetric.Export.Stackdriver.csproj" />
+		<ProjectReference Include="..\NetMetric.Export\NetMetric.Export.csproj" />
+	</ItemGroup>
+
+</Project>

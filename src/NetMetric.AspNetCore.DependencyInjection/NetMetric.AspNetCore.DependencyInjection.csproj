@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Extensions to wire NetMetric ASP.NET Core instrumentation into the app pipeline.
+      Adds the request metrics middleware via IApplicationBuilder and provides helpers
+      to configure histogram bucket bounds for HTTP metrics.
+    </Description>
+    <PackageTags>
+      netmetric;aspnetcore;dependency-injection;di;iapplicationbuilder;extensions;middleware;histogram;metrics;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	  <ProjectReference Include="..\NetMetric.AspNetCore\NetMetric.AspNetCore.csproj" />
+	</ItemGroup>
+	
+</Project>

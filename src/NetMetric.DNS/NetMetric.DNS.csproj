@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.DNS is a module for collecting DNS metrics in .NET apps:
+			resolver endpoints per network interface, resolve latency (ms),
+			success/failure counts, and IPv4/IPv6 address-family breakdown for
+			configurable hostnames. Configurable timeouts, concurrency limits, and
+			IPv6 toggle. Integrates with NetMetric via IModule and uses System.Net APIs.
+		</Description>
+		<PackageTags>
+			NetMetric;NetMetric.DNS;dotnet;dns;metrics;monitoring;observability;telemetry;
+			resolver;resolution;latency;success;failure;counter;timer;gauge;multigauge;
+			ipv4;ipv6;address-family;endpoints;network;networking;System.Net.Dns;
+			NetworkInterface;Sockets;AddressFamily;timeout;concurrency;module
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

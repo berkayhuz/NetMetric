@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Shared abstractions for NetMetric.Redis, including the IRedisClient interface that defines operations for Redis metrics collection,
+			slowlog, latency, keyspace, and server information. Designed for testability, flexibility, and dependency injection.
+		</Description>
+		<PackageTags>
+			redis;abstractions;interface;metrics;monitoring;dotnet;netmetric;telemetry;redisclient;slowlog;latency;observability
+		</PackageTags>
+	</PropertyGroup>
+
+</Project>

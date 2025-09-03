@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Contains abstractions for integrating NetMetric with Azure Monitor. Defines core telemetry tracking interfaces to support exporting metrics, aggregates, and custom telemetry to Azure Application Insights or Monitor pipelines.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;azure;monitor;appinsights;export;abstractions;telemetry;observability;diagnostics;dotnet;aot
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.ApplicationInsights" Version="2.23.0" />
+	</ItemGroup>
+
+</Project>

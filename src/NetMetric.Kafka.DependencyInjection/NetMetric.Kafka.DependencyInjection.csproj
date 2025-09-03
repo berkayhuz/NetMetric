@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Dependency injection extensions for NetMetric's Kafka module. Includes KafkaModule registration, statistics sink wiring for Confluent.Kafka clients,
+			and support for IMetricFactory and IKafkaStatsSource. Enables seamless Kafka metrics integration into .NET applications.
+		</Description>
+		<PackageTags>
+			kafka;netmetric;dependencyinjection;servicecollection;statistics;metrics;telemetry;observability;confluent;producer;consumer;lag;dotnet
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Kafka.Abstractions\NetMetric.Kafka.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Kafka\NetMetric.Kafka.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Confluent.Kafka" Version="2.11.1" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+</Project>

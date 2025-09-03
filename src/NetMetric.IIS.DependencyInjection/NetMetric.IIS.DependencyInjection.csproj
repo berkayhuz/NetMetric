@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Dependency injection extensions to register IIS in-process metrics. Adds IisMetricSet and an optional
+      IHostedService for background collection with a simple boolean toggle.
+    </Description>
+    <PackageTags>
+      netmetric;iis;dependency-injection;di;servicecollection;hostedservice;metrics;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.IIS\NetMetric.IIS.csproj" />
+    <ProjectReference Include="..\NetMetric.IIS\NetMetric.IIS.csproj" />
+  </ItemGroup>
+
+</Project>

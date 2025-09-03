@@ -1,0 +1,7 @@
+<Project>
+
+  <PropertyGroup>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)'=='true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+</Project>

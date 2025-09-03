@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.Timer provides core abstractions, adapters, and utilities for capturing high-performance timing metrics in .NET applications.
+			It includes low-allocation timing scopes, in-memory and caching sinks, dynamic service proxies, and helpers for measuring sync/async operations
+			using ITimerSink. Designed for observability and extensibility in performance-critical systems.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;timing;performance;telemetry;instrumentation;diagnostics;dotnet;proxy;aop;observability;core
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

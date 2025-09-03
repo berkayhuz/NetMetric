@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Provides dependency injection extensions for integrating NetMetric certificate monitoring
+      into .NET applications. Includes registration helpers for certificate sources, options,
+      and modules, enabling seamless configuration of certificate discovery, analysis, and
+      metrics collection via Microsoft.Extensions.DependencyInjection.
+    </Description>
+    <PackageTags>
+      netmetric;certificates;ssl;tls;x509;dependency-injection;di;servicecollection;dotnet;metrics;observability
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+    <ProjectReference Include="..\NetMetric.Certificates.Abstractions\NetMetric.Certificates.Abstractions.csproj" />
+    <ProjectReference Include="..\NetMetric.Certificates\NetMetric.Certificates.csproj" />
+  </ItemGroup>
+
+</Project>

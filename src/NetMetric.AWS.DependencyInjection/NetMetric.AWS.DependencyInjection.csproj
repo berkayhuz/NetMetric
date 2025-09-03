@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Provides dependency injection extensions for integrating NetMetric with AWS CloudWatch in .NET applications. Includes AOT- and trimmer-safe options binding, exporter composition, region-aware AWS SDK client setup, and hosted background flush service for metrics.
+    </Description>
+    <PackageTags>
+      netmetric;aws;cloudwatch;metrics;observability;telemetry;export;dependency-injection;dotnet;aot;trim;configuration;extensions
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.AWS\NetMetric.AWS.csproj" />
+  </ItemGroup>
+
+</Project>

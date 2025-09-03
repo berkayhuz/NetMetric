@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Full SignalR instrumentation: a global hub filter for method timing and connection lifecycle, negotiation
+      metrics middleware, and an Instrumented HubLifetimeManager decorator for group metrics. Includes a default
+      metric set implementing ISignalRMetrics.
+    </Description>
+    <PackageTags>
+      netmetric;signalr;middleware;hubfilter;hublifetimemanager;negotiation;websockets;sse;long-polling;metrics;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.SignalR.Abstractions\NetMetric.SignalR.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

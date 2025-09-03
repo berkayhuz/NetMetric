@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides a high-performance Amazon CloudWatch exporter for NetMetric. Supports counters, gauges, histograms, distributions, summaries, and multi-sample metrics with configurable batching, retry logic, and AWS region integration.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;cloudwatch;aws;export;telemetry;observability;dotnet;retry;batching;monitoring
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AWSSDK.CloudWatch" Version="4.0.2" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Export\NetMetric.Export.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Contracts and options for SignalR metrics in .NET. ISignalRMetrics covers connections, negotiation,
+      hub method durations, streaming items, message sizes, groups, user gauges, auth outcomes, and error events.
+      SignalRMetricsOptions provides latency and duration buckets, sampling, and transport normalization.
+    </Description>
+    <PackageTags>
+      netmetric;signalr;abstractions;contracts;metrics;observability;websockets;sse;long-polling;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.Memory.DependencyInjection provides convenient extension methods to integrate the NetMetric.Memory module into ASP.NET Core and .NET applications via Microsoft.Extensions.DependencyInjection. It enables effortless registration of memory metric collectors using configurable presets (Light, Default, Verbose) or custom options, supporting system memory, process memory, and GC metrics across Linux, Windows, and macOS platforms.
+			This package is intended to be used alongside NetMetric.Memory and simplifies its consumption in DI-based architectures, such as those powered by Generic Host or ASP.NET Core.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;memory;dependencyinjection;dotnet;gc;system;process;observability;diagnostics;servicecollection;performance;hosting;di
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Memory\NetMetric.Memory.csproj" />
+	</ItemGroup>
+
+</Project>

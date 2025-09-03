@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Dependency injection extensions for NetMetric.Redis, providing seamless integration of Redis metrics, configuration, and client registration
+			into ASP.NET Core applications using IServiceCollection. Supports options binding, validation, and modular Redis metrics collection.
+		</Description>
+		<PackageTags>
+			redis;dependencyinjection;di;aspnetcore;metrics;monitoring;telemetry;netmetric;extensions;redisclient;servicelifetime
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Redis.Abstractions\NetMetric.Redis.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Redis\NetMetric.Redis.csproj" />
+	</ItemGroup>
+
+</Project>

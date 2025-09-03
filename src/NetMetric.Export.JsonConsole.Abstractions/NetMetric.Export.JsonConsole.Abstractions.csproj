@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Defines abstractions for asynchronous text writing used by NetMetric JSON exporters. Enables decoupling between serialization and output targets such as console, file, or network sinks, while supporting AOT and testable designs.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;export;json;console;abstractions;writer;async;aot;telemetry;observability;dotnet
+		</PackageTags>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      ASP.NET Core instrumentation for HTTP server and MVC pipeline. Includes middleware, filters,
+      and binders to record request duration, sizes, totals, and stage timings (authorization,
+      resource, action, exception, model binding, validation). Provides route normalization,
+      HTTP/2–HTTP/3 flavor tagging, sampling, and configurable histogram buckets.
+    </Description>
+    <PackageTags>
+      netmetric;aspnetcore;http;middleware;mvc;filters;model-binding;authorization;validation;metrics;observability;opentelemetry;prometheus;http2;http3;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

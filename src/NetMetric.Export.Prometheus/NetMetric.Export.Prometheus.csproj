@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides Prometheus-compatible metric exporting for NetMetric, supporting the Prometheus text exposition format with rich formatting, trimming safety, and advanced options like authentication, rate limiting, and mTLS.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;export;prometheus;monitoring;observability;telemetry;text-format;aot;reflection;dotnet
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Export\NetMetric.Export.csproj" />
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Defines core abstractions and configuration types for NetMetric database instrumentation. Includes standardized tag keys, instrumentation APIs, and metric behavior options to support consistent, extensible DB metrics collection across providers.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;database;db;abstractions;instrumentation;telemetry;diagnostics;tags;aot
+		</PackageTags>
+	</PropertyGroup>
+
+</Project>

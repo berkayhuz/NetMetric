@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Kafka metrics module for NetMetric. Collects high-resolution statistics from Confluent.Kafka clients (producer/consumer) via Statistics event,
+			including latency, throughput, retry/error counters, and consumer lag. Includes support for dependency injection, cardinality control, and
+			DI-safe snapshot sources.
+		</Description>
+		<PackageTags>
+			kafka;metrics;observability;netmetric;confluent;producer;consumer;lag;latency;statistics;dotnet;monitoring;telemetry
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Confluent.Kafka" Version="2.11.1" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Kafka.Abstractions\NetMetric.Kafka.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

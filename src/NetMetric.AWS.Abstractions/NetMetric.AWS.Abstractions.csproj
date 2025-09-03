@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Provides abstractions for AWS-aware metric instrumentation in .NET applications using NetMetric. Includes interfaces for environment detection (Lambda, EC2, ECS, EKS), metric value normalization (numeric, count, statistic set), and CloudWatch-compatible dimensional tagging. Designed for high-performance telemetry pipelines with DI support and exporter decoupling.
+    </Description>
+    <PackageTags>
+      netmetric;aws;abstractions;telemetry;metrics;cloudwatch;lambda;ec2;eks;ecs;environment;instrumentation;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+</Project>

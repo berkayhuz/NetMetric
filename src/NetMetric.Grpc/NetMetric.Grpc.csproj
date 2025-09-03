@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      gRPC server metrics via an interceptor and metric set. Captures call duration, call counts,
+      message sizes, message counts, and errors across Unary, ServerStreaming, ClientStreaming, and Duplex.
+      Tags include service, method, call type, status code, direction, and exception. Configurable
+      latency/size histogram buckets; protobuf size estimation supported.
+    </Description>
+    <PackageTags>
+      netmetric;grpc;server;interceptor;metrics;latency;message-size;errors;observability;opentelemetry;prometheus;protobuf;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+		<PackageReference Include="Google.Protobuf" Version="3.32.0" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.71.0" />
+		<PackageReference Include="Grpc.Core.Api" Version="2.71.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.SystemIO.MacOS provides a macOS-specific implementation of IProcessIoReader for capturing real-time disk I/O metrics
+			using native APIs such as proc_pid_rusage. It enables high-resolution observability into process-level I/O statistics,
+			including bytes read and written, for .NET applications running on macOS.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;io;system;macos;process;performance;interop;pinvoke;telemetry;dotnet;osx
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.SystemIO.Abstractions\NetMetric.SystemIO.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

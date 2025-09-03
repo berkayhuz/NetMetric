@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.Network.DependencyInjection provides extension methods for integrating HTTP network timing metrics into .NET applications using Microsoft.Extensions.DependencyInjection. It enables automatic registration of DelegatingHandlers like HttpNetworkTimingHandler and TimingHandler into IHttpClientBuilder, allowing developers to capture and observe HTTP performance metrics such as TTFB, total duration, and server timing headers with minimal configuration.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;httpclient;network;timing;dependencyinjection;observability;dotnet;diagnostics;performance;delegatinghandler;ttfb
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Http" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Network\NetMetric.Network.csproj" />
+	</ItemGroup>
+
+</Project>

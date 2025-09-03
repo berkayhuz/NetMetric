@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Adds dependency injection extensions for configuring Prometheus exporters and scraping services in NetMetric. Includes support for text exporters, custom writer factories, IP rate limiting, and full integration with ASP.NET Core metrics endpoints.
+		</Description>
+		<PackageTags>
+			netmetric;prometheus;metrics;export;dependencyinjection;aspnetcore;dotnet;telemetry;observability;rate-limiting;injection
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Export.Prometheus.AspNetCore\NetMetric.Export.Prometheus.AspNetCore.csproj" />
+	</ItemGroup>
+
+</Project>

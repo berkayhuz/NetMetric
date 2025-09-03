@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Exports NetMetric metrics to OpenTelemetry. Provides a high-performance bridge between IMetric and OpenTelemetry's Meter API.
+			Supports gauges, counters, histograms, and multi-sample metrics. Includes customizable attribute mapping, quantile export modes, and error handling.
+		</Description>
+		<PackageTags>
+			netmetric;opentelemetry;bridge;metrics;telemetry;dotnet;observability;meter;exporter;monitoring;instrumentation
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+		<PackageReference Include="OpenTelemetry" Version="1.12.0" />
+		<PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.12.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.OpenTelemetryBridge.Abstractions\NetMetric.OpenTelemetryBridge.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

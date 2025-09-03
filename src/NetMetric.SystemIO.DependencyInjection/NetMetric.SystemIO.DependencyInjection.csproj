@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.SystemIO.DependencyInjection provides extension methods for integrating system I/O metrics collection into .NET applications using
+			Microsoft.Extensions.DependencyInjection. It detects the current operating system and registers the appropriate IProcessIoReader and
+			ISystemIoReader implementations for Windows, Linux, or macOS, enabling modular and platform-specific observability support.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;io;system;dependencyinjection;di;extensions;linux;windows;macos;process;telemetry;dotnet
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.SystemIO.Abstractions\NetMetric.SystemIO.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.SystemIO\NetMetric.SystemIO.csproj" />
+		<ProjectReference Include="..\NetMetric.SystemIO.MacOS\NetMetric.SystemIO.MacOS.csproj" />
+		<ProjectReference Include="..\NetMetric.SystemIO.Linux\NetMetric.SystemIO.Linux.csproj" />
+		<ProjectReference Include="..\NetMetric.SystemIO.Windows\NetMetric.SystemIO.Windows.csproj" />
+	</ItemGroup>
+
+</Project>

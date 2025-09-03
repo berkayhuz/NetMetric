@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides integration for Npgsql (PostgreSQL) with NetMetric. Includes a placeholder implementation for connection pool statistics sampling. Query and connection metrics are collected through interceptors.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;npgsql;postgres;postgresql;database;telemetry;observability;dotnet;aot
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Npgsql" Version="9.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Db\NetMetric.Db.csproj" />
+	</ItemGroup>
+
+</Project>

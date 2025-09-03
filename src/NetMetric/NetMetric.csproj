@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric is a high-performance metrics library for .NET.
+			It supports counters, gauges, histograms, timers, and summary metrics.
+			With dependency injection, AOT/Trim compatibility, and an extensible module architecture,
+			it enables easy observability and monitoring for modern .NET applications.
+		</Description>
+		<PackageTags>
+			metrics;observability;monitoring;counter;gauge;histogram;summary;timer;
+			prometheus;opentelemetry;dotnet;performance;library
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

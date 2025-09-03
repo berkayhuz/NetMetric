@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Adds dependency injection support for NetMetric's InfluxDB exporter. Automatically registers exporter, options, validation, and named HttpClient for v2 write API. Ensures correct MetricOptions wiring with support for composite exporters.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;export;influxdb;dependency-injection;telemetry;line-protocol;httpclient;dotnet;aot;observability
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Export.InfluxDB\NetMetric.Export.InfluxDB.csproj" />
+		<ProjectReference Include="..\NetMetric.Export\NetMetric.Export.csproj" />
+	</ItemGroup>
+
+</Project>

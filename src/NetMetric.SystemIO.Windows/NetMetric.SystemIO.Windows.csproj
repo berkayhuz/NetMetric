@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.SystemIO.Windows provides a Windows-specific implementation of IProcessIoReader for capturing real-time process I/O metrics
+			such as bytes read and written. It uses native Win32 APIs via P/Invoke to retrieve system-level I/O statistics, enabling observability
+			of process-level data in .NET applications running on Windows.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;io;system;windows;process;performance;pinvoke;telemetry;dotnet;interop
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.SystemIO.Abstractions\NetMetric.SystemIO.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides extension methods for IHttpClientBuilder to integrate NetMetric timing functionality
+			into HttpClient pipelines. Enables automatic measurement of HTTP client request durations
+			via a simple TimingHandler, with support for default and custom metric identifiers.
+		</Description>
+		<PackageTags>
+			netmetric;observability;metrics;metric;telemetry;httpclient;diagnostics;monitoring;timing;middleware;extensions
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Http" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Timer.Http\NetMetric.Timer.Http.csproj" />
+	</ItemGroup>
+
+</Project>

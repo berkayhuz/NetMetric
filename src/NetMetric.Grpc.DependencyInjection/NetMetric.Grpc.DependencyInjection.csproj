@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Dependency injection extensions to register NetMetric gRPC server instrumentation.
+      Adds GrpcServerMetricSet and the NetMetricServerInterceptor with configurable latency
+      and size buckets using Microsoft.Extensions.DependencyInjection.
+    </Description>
+    <PackageTags>
+      netmetric;grpc;dependency-injection;di;servicecollection;interceptor;metrics;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Grpc\NetMetric.Grpc.csproj" />
+  </ItemGroup>
+
+</Project>

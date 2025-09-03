@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      Provides core abstractions for certificate monitoring and metrics in .NET.
+      Includes common models, configuration options, and source interfaces for discovering
+      and analyzing certificates from multiple origins (file system, Windows certificate stores,
+      remote endpoints, or cloud providers). Enables consistent handling of certificate metadata,
+      expiration evaluation, and severity classification across monitoring scenarios.
+    </Description>
+    <PackageTags>
+      netmetric;certificates;ssl;tls;x509;certificate-monitoring;abstractions;security;metrics;observability;dotnet
+    </PackageTags>
+  </PropertyGroup>
+
+</Project>

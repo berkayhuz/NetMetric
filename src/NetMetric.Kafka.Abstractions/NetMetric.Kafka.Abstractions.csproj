@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Shared abstractions for Kafka telemetry in NetMetric. Defines interfaces and models for retrieving Kafka client statistics,
+			consumer lag snapshots, and structured metrics for producers and consumers. Supports testability, pluggable sources, and typed snapshot processing.
+		</Description>
+
+		<PackageTags>
+			kafka;abstractions;metrics;telemetry;observability;netmetric;lag;latency;producer;consumer;clientstats;snapshot;dotnet
+		</PackageTags>
+	</PropertyGroup>
+
+</Project>

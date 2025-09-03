@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Provides ASP.NET Core endpoint integration for NetMetric Prometheus exporter, enabling secure and configurable metric scraping with support for mTLS, rate limiting, authentication, CIDR-based IP filtering, and proxy-aware headers.
+		</Description>
+		<PackageTags>
+			netmetric;prometheus;aspnetcore;metrics;export;observability;telemetry;http-endpoint;rate-limiting;mtls;dotnet
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+		<ProjectReference Include="..\NetMetric.Export.Prometheus\NetMetric.Export.Prometheus.csproj" />
+	</ItemGroup>
+
+</Project>

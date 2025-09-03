@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      A library to collect and monitor SSL/TLS certificate expiry metrics for .NET applications.
+      This package provides collectors for tracking the number of days until certificate expiry,
+      counting expiring certificates, and bucketizing certificate expiry into defined time intervals.
+    </Description>
+    <PackageTags>
+      certificates, ssl, tls, metrics, expiry, .net, monitoring, observability, collector, bucket-histogram, gauge, expiring-certificates, days-left
+    </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+    <ProjectReference Include="..\NetMetric.Certificates.Abstractions\NetMetric.Certificates.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

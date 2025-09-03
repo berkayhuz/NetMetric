@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Abstractions for NetMetric's RabbitMQ module, defining contracts for connection and channel management via IRabbitMqConnectionProvider.
+			Enables testability, pluggability, and clean separation of concerns for RabbitMQ metrics and observability in .NET applications.
+		</Description>
+		<PackageTags>
+			rabbitmq;abstractions;interface;connection;channel;metrics;netmetric;dotnet;observability;telemetry;contracts;dependencyinjection
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="RabbitMQ.Client" Version="7.1.2" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			NetMetric.Process.Abstractions defines interfaces for collecting process-level metrics in .NET applications. It includes contracts for accessing process information, CPU and memory usage, uptime, and custom probes. This package is part of the NetMetric observability framework and is intended for use in modular metric collection and testing scenarios.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;abstractions;process;cpu;memory;uptime;threads;dotnet;observability;diagnostics;interfaces;dependency-injection
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

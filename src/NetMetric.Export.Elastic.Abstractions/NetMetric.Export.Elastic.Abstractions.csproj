@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>
+			Contains abstractions for mapping NetMetric metrics into Elasticsearch NDJSON documents. Decouples export logic from serialization details, enabling custom document formatting strategies for the Elasticsearch Bulk API.
+		</Description>
+		<PackageTags>
+			netmetric;metrics;elasticsearch;export;abstractions;ndjson;mapping;serialization;telemetry;observability;dotnet;aot
+		</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NetMetric.Abstractions\NetMetric.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>
