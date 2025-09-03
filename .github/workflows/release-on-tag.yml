@@ -14,6 +14,7 @@ concurrency:
 
 env:
   NUGET_SOURCE: https://api.nuget.org/v3/index.json
+  SYMBOL_SOURCE: https://symbols.nuget.org/upload
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
 
 jobs:
@@ -89,5 +90,5 @@ jobs:
             dotnet nuget push "${PKGS[@]}" --api-key "$NUGET_API_KEY" --source "$NUGET_SOURCE" --skip-duplicate
           fi
           if [ ${#SYMS[@]} -gt 0 ]; then
-            dotnet nuget push "${SYMS[@]}" --api-key "$NUGET_API_KEY" --source "$NUGET_SOURCE" --skip-duplicate
+            dotnet nuget push "${SYMS[@]}" --api-key "$NUGET_API_KEY" --source "$SYMBOL_SOURCE" --skip-duplicate
           fi

@@ -22,7 +22,7 @@
     <Product>NetMetric</Product>
     <Copyright>© 2025 NetMetric.</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/berkayhuz/netmetric</PackageProjectUrl>
+    <PackageProjectUrl>https://www.netmetric.net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/berkayhuz/netmetric</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>

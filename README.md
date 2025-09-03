@@ -1,17 +1,10 @@
-<span style="display:inline-flex; gap:8px; align-items:center; font-size:28px; font-weight:400;">
-<svg style="width:32px; height:32px; fill:white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M4 0h16a4 4 0 014 4v16a4 4 0 01-4 4h-16a4 4 0 01-4-4v-16a4 4 0 014-4m1 18a1 1 0 002 0l0-4a1 1 0 00-2 0m4 4a1 1 0 002 0l0-9a1 1 0 00-2 0m4 9a1 1 0 002 0l0-12a1 1 0 00-2 0m4 12a1 1 0 002 0l0-7a1 1 0 00-2 0" />
-</svg>
-NetMetric
-</span>
+A high-performance, flexible, tag-based metrics collection library for .NET applications.
 
-#### A high-performance, flexible, tag-based metrics collection library for .NET applications.
-
-### Documentation
+**Documentation**
 
 Get started quickly by reviewing the [official documentation](https://netmetric.net).
 
-### NuGet Packages
+**NuGet Packages**
 
 The following NuGet packages are officially supported:
 
